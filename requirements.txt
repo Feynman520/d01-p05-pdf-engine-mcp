@@ -1,0 +1,6 @@
+# 검증 환경(2026-07): Python 3.12 / Windows 11 (크로스플랫폼 — COM 의존 없음)
+mcp>=1.28.0
+pypdf[crypto]>=5.0        # 문서 수술: 병합·분할·양식·암호(AES)·압축·첨부·북마크
+pypdfium2>=4.30           # PDFium(크롬 PDF 엔진): 렌더링·텍스트 추출
+Pillow>=10.0              # 이미지 저장·재압축
+# mcp가 자동 설치: anyio, pydantic, httpx, starlette, uvicorn 등
