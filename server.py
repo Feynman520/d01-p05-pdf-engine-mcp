@@ -422,6 +422,8 @@ async def pdf_set_metadata(
 async def pdf_health() -> dict:
     """엔진 상태 점검 — pypdf/PDFium/Pillow 버전 확인(상주 앱 없음, 즉시 응답)."""
     def work():
+        import importlib.metadata
+
         import PIL
         import pypdf
         import pypdfium2
@@ -433,7 +435,8 @@ async def pdf_health() -> dict:
             "alive": True,
             "stateless": True,
             "pypdf": pypdf.__version__,
-            "pypdfium2": pypdfium2.__version__,
+            # pypdfium2 5.x 에는 __version__ 이 없다 — 설치 정보에서 읽는다(2026-10-29).
+            "pypdfium2": importlib.metadata.version("pypdfium2"),
             "pdfium_build": str(pdfium_ver),
             "pillow": PIL.__version__,
         }
