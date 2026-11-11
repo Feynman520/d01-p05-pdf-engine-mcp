@@ -96,7 +96,7 @@ def main() -> int:
     r = form.form_fields(form_pdf)
     assert r["count"] == 2 and {f["name"] for f in r["fields"]} == {"name", "school"}, r
     filled = os.path.join(OUT, "filled.pdf")
-    r = form.fill_form(form_pdf, filled, {"name": "Hong Gildong", "school": "Shinjang HS"})
+    r = form.fill_form(form_pdf, filled, {"name": "Hong Gildong", "school": "Sample HS"})
     assert set(r["filled"]) == {"name", "school"}, r
     vals = {f["name"]: f["value"] for f in form.form_fields(filled)["fields"]}
     assert vals["name"] == "Hong Gildong", vals
