@@ -86,3 +86,7 @@ PDF→Word conversion is intentionally **not** here — the word sibling's `word
 ## License
 
 [MIT](LICENSE)
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute and [SECURITY.md](SECURITY.md) for reporting security issues.

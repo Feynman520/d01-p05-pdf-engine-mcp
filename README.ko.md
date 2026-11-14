@@ -85,3 +85,7 @@ PDF→Word 변환은 의도적으로 없음 — word 형제의 `word_convert` �
 ## 라이선스
 
 [MIT](LICENSE)
+
+## 기여
+
+의견과 PR 안내는 [CONTRIBUTING.md](CONTRIBUTING.md)를, 보안 문제 신고는 [SECURITY.md](SECURITY.md)를 봐 주세요.
